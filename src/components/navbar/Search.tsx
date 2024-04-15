@@ -8,6 +8,7 @@ const Search = () => {
         <div className="text-sm font-semibold px-6">anywhere</div>
         <div
           className="
+          text-sm
         hidden
         sm:block
         font-semibold
@@ -19,7 +20,7 @@ const Search = () => {
 
         "
         >
-          Any Week
+          AnyWeek
         </div>
         <div
           className="
