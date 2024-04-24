@@ -7,6 +7,9 @@ import prisma from "@/libs/prismadb";
 // import GoogleProvider from "next-auth/providers/google";
 import bcrypt from "bcrypt";
 import CredentialsProvider from "next-auth/providers/credentials";
+import client from "@/libs/prismadb";
+
+
 
 export const authOptions: AuthOptions = {
   adapter: PrismaAdapter(prisma),
@@ -66,4 +69,9 @@ signIn: "/",
   secret: process.env.NEXTAUTH_SECRET,
 };
 
-export default NextAuth(authOptions);
+const handler = NextAuth(authOptions);
+
+export  {
+  handler as GET,
+  handler as POST,
+};
